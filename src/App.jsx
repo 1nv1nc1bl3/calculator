@@ -1,6 +1,20 @@
 import { useState } from 'react';
 
 export default function App() {
+    // Button Styles
+    const baseBtn =
+        'cursor-pointer text-2xl p-2 rounded-lg bg-slate-800 hover:bg-slate-700 btn';
+
+    const buttonStyles = {
+        number: '',
+        operator:
+            'cursor-pointer text-2xl p-2 rounded-lg bg-sky-950 hover:bg-sky-900 btn',
+        control:
+            'cursor-pointer text-2xl p-2 rounded-lg bg-stone-900 hover:bg-stone-800 btn',
+        equals: 'cursor-pointer text-2xl p-2 rounded-lg bg-gray-900 hover:bg-gray-800 btn',
+    };
+
+    // Functions
     const [display, setDisplay] = useState('0');
 
     const handleNumber = (num) => {
@@ -40,65 +54,43 @@ export default function App() {
                 </div>
 
                 <div className='buttons grid grid-cols-4 gap-4'>
-                    <button className='cursor-pointer text-2xl p-2 rounded-lg bg-stone-900 hover:bg-stone-800 btn control'>
+                    <button className={`${buttonStyles.control} control`}>
                         C
                     </button>
-                    <button className='cursor-pointer text-2xl p-2 rounded-lg bg-stone-900 hover:bg-stone-800 btn control'>
+                    <button className={`${buttonStyles.control} control`}>
                         DEL
                     </button>
-                    <button className='cursor-pointer text-2xl p-2 rounded-lg bg-sky-950 hover:bg-sky-900 btn operator'>
+                    <button className={`${buttonStyles.operator} operator`}>
                         %
                     </button>
-                    <button className='cursor-pointer text-2xl p-2 rounded-lg bg-sky-950 hover:bg-sky-900 btn operator'>
+                    <button className={`${buttonStyles.operator} operator`}>
                         /
                     </button>
 
-                    <button className='cursor-pointer text-2xl p-2 rounded-lg bg-slate-800 hover:bg-slate-700 btn'>
-                        7
-                    </button>
-                    <button className='bcursor-pointer text-2xl p-2 rounded-lg bg-slate-800 hover:bg-slate-700 btn'>
-                        8
-                    </button>
-                    <button className='cursor-pointer text-2xl p-2 rounded-lg bg-slate-800 hover:bg-slate-700 btn'>
-                        9
-                    </button>
-                    <button className='cursor-pointer text-2xl p-2 rounded-lg bg-sky-950 hover:bg-sky-900 btn operator'>
+                    <button className={`${baseBtn} btn`}>7</button>
+                    <button className={`${baseBtn} btn`}>8</button>
+                    <button className={`${baseBtn} btn`}>9</button>
+                    <button className={`${buttonStyles.operator} operator`}>
                         x
                     </button>
 
-                    <button className='cursor-pointer text-2xl p-2 rounded-lg bg-slate-800 hover:bg-slate-700 btn'>
-                        4
-                    </button>
-                    <button className='cursor-pointer text-2xl p-2 rounded-lg bg-slate-800 hover:bg-slate-700 btn'>
-                        5
-                    </button>
-                    <button className='cursor-pointer text-2xl p-2 rounded-lg bg-slate-800 hover:bg-slate-700 btn'>
-                        6
-                    </button>
-                    <button className='cursor-pointer text-2xl p-2 rounded-lg bg-sky-950 hover:bg-sky-900 btn operator'>
+                    <button className={`${baseBtn} btn`}>4</button>
+                    <button className={`${baseBtn} btn`}>5</button>
+                    <button className={`${baseBtn} btn`}>6</button>
+                    <button className={`${buttonStyles.operator} operator`}>
                         -
                     </button>
 
-                    <button className='cursor-pointer text-2xl p-2 rounded-lg bg-slate-800 hover:bg-slate-700 btn'>
-                        1
-                    </button>
-                    <button className='cursor-pointer text-2xl p-2 rounded-lg bg-slate-800 hover:bg-slate-700 btn'>
-                        2
-                    </button>
-                    <button className='cursor-pointer text-2xl p-2 rounded-lg bg-slate-800 hover:bg-slate-700 btn'>
-                        3
-                    </button>
-                    <button className='cursor-pointer text-2xl p-2 rounded-lg bg-sky-950 hover:bg-sky-900 btn operator'>
+                    <button className={`${baseBtn} btn`}>1</button>
+                    <button className={`${baseBtn} btn`}>2</button>
+                    <button className={`${baseBtn} btn`}>3</button>
+                    <button className={`${buttonStyles.operator} operator`}>
                         +
                     </button>
 
-                    <button className='cursor-pointer text-2xl p-2 rounded-lg bg-slate-800 hover:bg-slate-700 btn zero col-span-2'>
-                        0
-                    </button>
-                    <button className='cursor-pointer text-2xl p-2 rounded-lg bg-slate-800 hover:bg-slate-700 btn'>
-                        .
-                    </button>
-                    <button className='cursor-pointer text-2xl p-2 rounded-lg bg-gray-900 hover:bg-gray-800 btn equals'>
+                    <button className={`${baseBtn} zero col-span-2`}>0</button>
+                    <button className={`${baseBtn} btn`}>.</button>
+                    <button className={`${buttonStyles.equals} equals`}>
                         =
                     </button>
                 </div>
