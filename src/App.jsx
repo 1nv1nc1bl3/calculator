@@ -73,24 +73,16 @@ export default function App() {
                         /
                     </button>
 
-                    <button
-                        className={`${baseBtn} ${buttonStyles.number}`}
-                        onClick={() => handleClick('7')}
-                    >
-                        7
-                    </button>
-                    <button
-                        className={`${baseBtn} ${buttonStyles.number}`}
-                        onClick={() => handleClick('8')}
-                    >
-                        8
-                    </button>
-                    <button
-                        className={`${baseBtn} ${buttonStyles.number}`}
-                        onClick={() => handleClick('9')}
-                    >
-                        9
-                    </button>
+                    {[7, 8, 9].map((num) => (
+                        <button
+                            key={num}
+                            className={`${baseBtn} ${buttonStyles.number}`}
+                            onClick={() => handleClick(num)}
+                        >
+                            {num}
+                        </button>
+                    ))}
+
                     <button
                         className={`${buttonStyles.operator} ${baseBtn}`}
                         onClick={() => handleClick('*')}
@@ -98,24 +90,16 @@ export default function App() {
                         x
                     </button>
 
-                    <button
-                        className={`${baseBtn} ${buttonStyles.number}`}
-                        onClick={() => handleClick('4')}
-                    >
-                        4
-                    </button>
-                    <button
-                        className={`${baseBtn} ${buttonStyles.number}`}
-                        onClick={() => handleClick('5')}
-                    >
-                        5
-                    </button>
-                    <button
-                        className={`${baseBtn} ${buttonStyles.number}`}
-                        onClick={() => handleClick('6')}
-                    >
-                        6
-                    </button>
+                    {[4, 5, 6].map((num) => (
+                        <button
+                            key={num}
+                            className={`${baseBtn} ${buttonStyles.number}`}
+                            onClick={() => handleClick(num)}
+                        >
+                            {num}
+                        </button>
+                    ))}
+
                     <button
                         className={`${buttonStyles.operator} ${baseBtn}`}
                         onClick={() => handleClick('-')}
@@ -123,24 +107,16 @@ export default function App() {
                         -
                     </button>
 
-                    <button
-                        className={`${baseBtn} ${buttonStyles.number}`}
-                        onClick={() => handleClick('1')}
-                    >
-                        1
-                    </button>
-                    <button
-                        className={`${baseBtn} ${buttonStyles.number}`}
-                        onClick={() => handleClick('2')}
-                    >
-                        2
-                    </button>
-                    <button
-                        className={`${baseBtn} ${buttonStyles.number}`}
-                        onClick={() => handleClick('3')}
-                    >
-                        3
-                    </button>
+                    {[7, 8, 9].map((num) => (
+                        <button
+                            key={num}
+                            className={`${baseBtn} ${buttonStyles.number}`}
+                            onClick={() => handleClick(num)}
+                        >
+                            {num}
+                        </button>
+                    ))}
+
                     <button
                         className={`${buttonStyles.operator} ${baseBtn}`}
                         onClick={() => handleClick('+')}
